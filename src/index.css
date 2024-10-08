@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1E2A38;
 }
 
 code {
@@ -12,8 +13,15 @@ code {
     monospace;
 }
 
-nav span{
-  font-family: "Playfair Display", serif;
-  font-weight: 900;
-  font-style: italic;
+
+
+
+:root{
+  --prime-color:#f4f4f4;
+  --white:#fff;
+  --secand-color:#c2c2c2;
+  --highlight-color:#08bce0;
+  --text-color:#777777; 
+  --prime-font:"Josefin Sans", sans-serif;
+
 }

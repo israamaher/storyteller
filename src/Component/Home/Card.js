@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
-import logo192 from './logo192.png';
+import logo192 from '../logo192.png';
+import './slide.css'
 function Card(props){ 
 
 
@@ -9,14 +10,14 @@ function Card(props){
 
 <div className="container" > 
 
-<div className="card" style={{width: "18rem",}}>
-<img src={logo192} className="card-img-top" alt="..."/>
+<div className="card" >
+<img  className="card-img-top" alt="..."/>
 <div className="card-body">
 <h5 className="card-title">Card title</h5>
 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 </div>
 <div className="card-body">
-<Link to="/" className="card-link">See more</Link>
+<button to="/" className=" ">Read More</button>
 
 </div>
 </div>

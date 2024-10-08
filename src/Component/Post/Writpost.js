@@ -77,7 +77,7 @@ class Writepost extends React.Component{
             </label>
             {preview && <img src={preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />}
             </fieldset>
-            <button type="submit" className="btn btn-success" >Publish </button>
+            <button type="submit" className=" " >Publish </button>
             </div>
 
             </div>

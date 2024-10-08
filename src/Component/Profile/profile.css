@@ -1,0 +1,10 @@
+.card{
+    background-color: var(--prime-color);
+    color: var(--secand-color);
+} 
+.card-link{
+    color: var(--highlight-color);
+}
+.btn{
+    background-color: var(--highlight-color);
+}

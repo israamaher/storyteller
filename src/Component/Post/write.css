@@ -1,9 +1,7 @@
 form{
-    /* padding: 100px; */
     margin:75px 0px;
     font-family: "Open Sans", sans-serif;
-  
-   
+    color: var(--text-color);
 }
 
 input:first-child{
@@ -11,25 +9,25 @@ input:first-child{
     border: none;
     font-size: xx-large;
     font-weight: bolder;
-    background-color: #f4f4f4;
-   
+    background-color: var(--prime-color);
+    color: var(--secand-color);
 
 }
 input::placeholder{
     font-weight: bold;
     font-size:xx-large;
-   
-    
+    color: var(--text-color);
 }
 textarea::placeholder{
     padding: 50px;
     font-size: large;
- 
+    color: var(--text-color);
+
 } 
 textarea {
     border: none;
-    background-color: #f4f4f4;
-   
+    background-color: var(--prime-color);
+    color: var(--secand-color);
 } 
 
 input::file-selector-button{
@@ -37,10 +35,15 @@ input::file-selector-button{
     width: 50px;
     height: 50px;
     color:transparent;
-    border: 3px solid lightgray;
+    border: 3px solid var(--secand-color);
     background-color: transparent;
-
 } 
-
+button{
+    background-color: var(--highlight-color);
+    padding: 10PX 15px; 
+    color: var(--white);
+    border:1px solid var(--highlight-color);
+    border-radius: 20px !important;
+}
 
 

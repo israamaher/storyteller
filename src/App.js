@@ -1,12 +1,14 @@
 
 import './App.css';
-import Nav from './Component/Nav';
-import Writepost from './Component/Writpost';
-import Signin from './Component/Signin';
-import Cardlist from './Component/Cardlist';
-import Login from './Component/Login';
-import NavH from './Component/NavH';
+import Nav from './Component/Nav/Nav';
+import Writepost from './Component/Post/Writpost';
+import Signin from './Component/Log/Signin';
+import Cardlist from './Component/Home/Cardlist';
+import Login from './Component/Log/Login';
+import NavH from './Component/Nav/NavH';
 import { Routes , Route } from 'react-router-dom';
+import Cardprofile from './Component/Profile/CardProfile';
+import Slide from './Component/Home/Slide';
 
 function App() {
   return (
@@ -15,9 +17,10 @@ function App() {
 
         <Routes > 
         < Route path='writepost' element={ <>  < Nav /> <Writepost/>  </>} /> 
-        < Route path='/' element={  <>  < Nav /> <Cardlist/>  </>} /> 
+        < Route path='/' element={  <>  < Nav /> <Slide/> <Cardlist/>  </>} /> 
         <Route path='signin' element={ <>  <NavH/> <Signin/> </>} />
         <Route path='login' element={ <> <NavH/> <Login/> </>}/>
+        <Route path='profile' element={<> <Nav/> <Cardprofile/>  </> }/>
         </Routes>
       
     </div>

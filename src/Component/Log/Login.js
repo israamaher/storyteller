@@ -31,7 +31,7 @@ function Login(){
                 <input id="new-password" name="newPassword" type="password" pattern="[a-z0-5]{8,}" required  onChange={(event)=>{
                     passWordHandeler(event.target.value); }} /></label>
             </fieldset>
-            <input type="submit" value="Log in"  className="btn btn-success" />
+            <input type="submit" value="Log in"  className="btn btn-info" />
         </form>
         </>
     );

@@ -1,0 +1,16 @@
+
+
+.navbar-brand{
+    color: var(--secand-color) !important;
+    font-family: var(--prime-font);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 100px;
+} 
+.navbar-nav .nav-link{
+    color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link .join{
+    background-color: var(--highlight-color);
+}
