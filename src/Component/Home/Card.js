@@ -1,9 +1,12 @@
-
-import { Link } from 'react-router-dom';
-import logo192 from '../logo192.png';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './slide.css'
 function Card(props){ 
+const navigate = useNavigate();
 
+    const goToArtical=()=>{
+        navigate('/Artical');
+    }
 
     return(
         <>
@@ -17,7 +20,7 @@ function Card(props){
 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 </div>
 <div className="card-body">
-<button to="/" className=" ">Read More</button>
+<button onClick={goToArtical}>Read More</button>
 
 </div>
 </div>
