@@ -1,11 +1,17 @@
 .slide{
-    margin-top: 150px;
-    text-align: start;
-    height: 75vh;
+   
+    
+    height: 100vh;
+    background-image: url(../../slide.png);
+    background-size: cover;
 
 }
+.slide .container{
+   padding-top: 100px;
+    text-align: start;
+}
 div>h1{
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: bold;
     color: var(--highlight-color);
     font-family: var(--prime-font);

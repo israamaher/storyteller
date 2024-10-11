@@ -1,8 +1,26 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import {faTrashCan} from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import'./profile.css';
-function Cardprofile(){
+function Cardprofile({ post }){
+
+    const navigate = useNavigate();
+    
+    const goToArtical=()=>{
+        navigate('/Artical');
+    }
+
+
+    const truncateText = (text, maxLength)=>{
+
+        if (!text) return ''; 
+
+        if(text.length > maxLength){
+            return text.slice(0, maxLength) + '...';
+        }
+        return text;
+    }
 
     return(
     <div className="card mb-3 container" >
@@ -12,10 +30,14 @@ function Cardprofile(){
         </div>
         <div className="col-md-8">
         <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <h5 className="card-title">{post.title}</h5>
+        <p className="card-text">
+            {truncateText(post.content, 100)}
+
+        </p>
         </div>
         <div class="card-body">
+        <button onClick={goToArtical}>Read More</button>    
         <button href="#" class=" mx-2"> <FontAwesomeIcon icon={faPenToSquare} /></button >
         <button href="#" class="btn btn-danger mx-2"><FontAwesomeIcon icon={faTrashCan} /></button >
         </div>

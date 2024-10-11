@@ -8,3 +8,15 @@
 .btn{
     background-color: var(--highlight-color);
 }
+.profile{
+    display: flex;
+    flex-direction: row;
+
+} 
+.right{
+    padding-top: 10px;
+} 
+.left{
+
+} 
+

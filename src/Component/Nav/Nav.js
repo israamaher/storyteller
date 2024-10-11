@@ -10,7 +10,7 @@ return(
 <nav className="navbar navbar-expand-lg  ">
 <div className="container">
         <Link className="navbar-brand" to="/">
-                <span className="h1" style={{color:"var(--highlight-color)"}}> Story</span> <span className="h1" style={{color:"#000"}}>teller </span>
+                <span className="h1" style={{color:"var(--highlight-color)"}}> Story<span className="h1" style={{color:"#000"}}>teller </span> </span> 
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@ return(
         <ul className="dropdown-menu" >
                 <li ><Link className="dropdown-item" to="/profile">Profial</Link></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><Link className="dropdown-item" to="/login">Sign up</Link></li>
+                <li><Link className="dropdown-item" to="/login">Sign out</Link></li>
                 
         </ul>
         </li>

@@ -1,52 +1,52 @@
-import React from "react"; 
+import { useState } from "react";
+import { useFirestore } from "../../firebase/useFirestore";
 import './write.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
+const initialpost ={headline:"", body:""};
 
-class Writepost extends React.Component{
-    constructor(props){
-        super(props);
-        this.state ={
-            title:"",
-            content:"",
-            image: null,
-            preview: null,
-        };
-    }
+function Writepost() {
+    const {addposts } = useFirestore();
+    const [Post, setPost]=useState(initialpost);
+    const [Image,setImage]=useState("");
+    const [Preview,setPreview] = useState("");
 
-    handleChange = (e) => {
-        this.setState({ [e.target.name]: e.target.value });
+
+    const handleChange = ({ target }) => {
+        setPost({...Post, [target.name]: target.value });
     };
 
-    handleFileChange = (e) => {
+    const handleFileChange = (e) => {
         const file = e.target.files[0];
-        this.setState({image : file});
+        setImage({Image : file});
         // Preview the image
         const reader = new FileReader();
         reader.onloadend = () => {
-        this.setState({ preview: reader.result });
+        setPreview({ Preview: reader.result });
         };
         if (file) {
         reader.readAsDataURL(file);
         }
     };
 
-    render(){
-        const { title, content, preview } = this.state;
+    const handelSubmit = async (e)=>{
+        e.preventDefault();
+        await addposts(Post);
+        console.log(Post)
+        setPost(initialpost);
+    }
+
         return(  
             <>  
-            <form  className="container" onSubmit={(e)=>{ e.preventDefault();
-                console.log(this.state);
-                }} > 
+            <form  className="container"  onSubmit={handelSubmit}> 
             <div className="row"> 
             <div className="col-8" >
             
             <input
                 type="text"
                 name="title"
-                value={title}
-                onChange={this.handleChange}
+                onChange={handleChange}
                 required
                 placeholder="Title"
             />
@@ -57,8 +57,7 @@ class Writepost extends React.Component{
                 name="content"
                 rows={15}
                 cols={100}
-                value={content}
-                onChange={this.handleChange}
+                onChange={handleChange}
                 required
                 placeholder="Tell us your story..." 
             />
@@ -72,21 +71,19 @@ class Writepost extends React.Component{
             <input 
             type="file" name="image" 
             accept="image/*"
-            onChange={this.handleFileChange}
+            onChange={handleFileChange}
             hidden /> 
             </label>
-            {preview && <img src={preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />}
+            {Preview && <img src={Preview} alt="Preview" style={{ width: '200px', height: 'auto' }} />}
             </fieldset>
             <button type="submit" className=" " >Publish </button>
             </div>
-
             </div>
             </form>
-            
-            
             </>
         )
+
     };
-}
+
 
 export default Writepost;

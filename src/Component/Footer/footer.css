@@ -1,0 +1,10 @@
+.footer{
+    padding: 20px;
+    border-top: 1px solid var(--secand-color);
+    
+}
+.footer h6{
+    display: inline;
+    margin: 15px;
+    color: var(--text-color);
+}

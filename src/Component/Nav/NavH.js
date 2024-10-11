@@ -18,13 +18,13 @@ function NavH(){
         <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle btn btn-info" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            JOIN
+        <Link className="nav-link dropdown-toggle "  to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            JOIN US
         </Link>
         <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to="/Login">Log in</Link></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><Link className="dropdown-item" to="/Signin">Sign in</Link></li>
+                <li><Link className="dropdown-item" to="/Signin">Sign up</Link></li>
                 
         </ul>
         </li>
