@@ -8,15 +8,32 @@
 .btn{
     background-color: var(--highlight-color);
 }
-.profile{
-    display: flex;
-    flex-direction: row;
+
+
+.head-profile{
+    border-bottom: 1px solid var(--secand-color);
+    padding: 50px;
+}
+.head-profile img{
+    width: 200px;
+    height: 200px;
+} 
+
+.material-symbols-outlined, .head-profile h2 {
+font-size: 4rem; 
 
 } 
-.right{
-    padding-top: 10px;
-} 
-.left{
 
-} 
 
+.head h2{
+    font-size: 3rem;
+    text-align: start;
+    margin-top: 20px;
+} 
+.edit label{
+    font-weight: bold;
+    font-size: larger;
+}
+.edit input:value{
+    color: white;
+}

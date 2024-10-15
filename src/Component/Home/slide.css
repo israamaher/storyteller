@@ -1,6 +1,16 @@
-.slide{
+.cardlist ul {
+    display: flex;
+    justify-content: center;
+}
+.cardlist .nav-link {
+    color: var(--highlight-color) !important;
+    font-weight: bold;
+} 
+.card-img-top{
    
-    
+}
+
+.slide{
     height: 100vh;
     background-image: url(../../slide.png);
     background-size: cover;

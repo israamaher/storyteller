@@ -1,7 +1,13 @@
 form{
     margin:75px 0px;
     font-family: "Open Sans", sans-serif;
-    color: var(--text-color);
+    color: black;
+  
+   
+}
+.write{
+   
+
 }
 
 input[type="text"]{
@@ -10,7 +16,7 @@ input[type="text"]{
     font-size: xx-large;
     font-weight: bolder;
     background-color: var(--white);
-    color: var(--secand-color);
+   
 
 }
 input::placeholder{
@@ -27,7 +33,7 @@ textarea::placeholder{
 textarea {
     border: none;
     background-color: var(--white);
-    color: var(--secand-color);
+   
 } 
 
 input::file-selector-button{

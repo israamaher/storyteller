@@ -25,7 +25,7 @@ const navigate = useNavigate();
 <div className="container" > 
 
 <div className="card" >
-<img  className="card-img-top" alt="..."/>
+<img  className="card-img-top"  src={post.imageUrl} alt={post.title}/>
 <div className="card-body">
 <h5 className="card-title">{post.title}</h5>
 <p className="card-text">

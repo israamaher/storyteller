@@ -26,7 +26,7 @@ function Cardprofile({ post }){
     <div className="card mb-3 container" >
     <div className="row g-0">
         <div className="col-md-4">
-        <img src="..." className="img-fluid rounded-start" alt="..."/>
+        <img src={post.imageUrl} alt={post.title} className="img-fluid rounded-start" />
         </div>
         <div className="col-md-8">
         <div className="card-body">
