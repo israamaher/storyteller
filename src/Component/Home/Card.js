@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './slide.css';
+import { Link } from 'react-router-dom';
 
 function Card({ post }){ 
 const navigate = useNavigate();
 
     const goToArtical=()=>{
-        navigate('/Artical');
+        navigate('/Article');
     }
 
     const truncateText = (text, maxLength)=>{
@@ -34,7 +35,7 @@ const navigate = useNavigate();
 </p>
 </div>
 <div className="card-body">
-<button onClick={goToArtical}>Read More</button>
+<Link to={`/article/${post.id}`} className="link" state={{backgroundColor:"var(--highlight-color)"}}>Read more</Link>
 
 </div>
 </div>

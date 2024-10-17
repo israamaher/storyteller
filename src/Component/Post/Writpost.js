@@ -85,9 +85,6 @@ function Writepost() {
             />
           </div>
 
-         
-         
-
           {/* Image Field */}
           <div className="col-4 my-auto">
             <fieldset>

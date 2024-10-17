@@ -5,9 +5,7 @@
 .card-link{
     color: var(--highlight-color);
 }
-.btn{
-    background-color: var(--highlight-color);
-}
+
 
 
 .head-profile{
@@ -37,3 +35,24 @@ font-size: 4rem;
 .edit input:value{
     color: white;
 }
+
+.link{
+    background-color: var(--highlight-color);
+    color: var(--white);
+    padding: 15px;
+    margin-bottom: 30px; 
+    border-radius: 15px;
+}
+
+/* -----------editpost---------- */
+
+.headUpdate {
+    font-size: 3rem;
+    text-align: start;
+  
+} 
+
+
+
+/*  editprofile */
+

@@ -3,9 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUser} from'@fortawesome/free-solid-svg-icons'; 
 import { Link  } from "react-router-dom";
 import './nav.css';
+import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 
 function Nav(){
+
+const navigate = useNavigate();
+const { logout } = useAuth();
+const handleLogout= async()=>{
+        await logout();
+        navigate("/Login");
+        
+}
 return(
 <nav className="navbar navbar-expand-lg  ">
 <div className="container">
@@ -33,7 +43,7 @@ return(
         <ul className="dropdown-menu" >
                 <li ><Link className="dropdown-item" to="/profile">Profial</Link></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><Link className="dropdown-item" to="/login">Sign out</Link></li>
+                <li><button className="dropdown-item" onClick={handleLogout}>Sign out</button></li>
                 
         </ul>
         </li>

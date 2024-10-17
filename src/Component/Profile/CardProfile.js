@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import {faTrashCan} from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import'./profile.css';
-function Cardprofile({ post }){
-
-    const navigate = useNavigate();
-    
-    const goToArtical=()=>{
-        navigate('/Artical');
-    }
-
-
+function Cardprofile({ post, deletePost }){
+      // Handle delete confirmation
+    const handleDelete = () => {
+        const isConfirmed = window.confirm(`Are you sure you want to delete the post: "${post.title}"?`);
+        
+        if (isConfirmed) {
+        deletePost(post.id); // Call deletePost function if user confirms
+        }
+    };
     const truncateText = (text, maxLength)=>{
 
         if (!text) return ''; 
@@ -29,17 +29,18 @@ function Cardprofile({ post }){
         <img src={post.imageUrl} alt={post.title} className="img-fluid rounded-start" />
         </div>
         <div className="col-md-8">
+
         <div className="card-body">
         <h5 className="card-title">{post.title}</h5>
         <p className="card-text">
             {truncateText(post.content, 100)}
-
         </p>
         </div>
-        <div class="card-body">
-        <button onClick={goToArtical}>Read More</button>    
-        <button href="#" class=" mx-2"> <FontAwesomeIcon icon={faPenToSquare} /></button >
-        <button href="#" class="btn btn-danger mx-2"><FontAwesomeIcon icon={faTrashCan} /></button >
+
+        <div className="card-body">
+        <Link to={`/article/${post.id}`} className="link">Read more</Link>  
+        <Link to={`/editpost/${post.id}`} className="  link mx-2"> <FontAwesomeIcon icon={faPenToSquare} /></Link >
+        <button onClick={handleDelete} className="btn btn-danger mx-2"><FontAwesomeIcon icon={faTrashCan} /></button >
         </div>
         </div>
     </div>
