@@ -1,1 +1,50 @@
 [1014/205028.420:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004800.922:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004818.744:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004823.826:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004828.842:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004833.862:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004838.878:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004843.883:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004848.888:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004854.477:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004859.487:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004904.497:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004909.502:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004914.518:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004919.532:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004924.549:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004929.976:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/004934.985:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/034936.306:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/034941.370:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[1027/101326.455:INFO:CONSOLE(1)] "%cUnhandled rejection Error: unknown exception type
+    at <anonymous>:1:1
+From previous event:
+    at O.M [as _captureStackTrace] (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:15957)
+    at O._then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:41006)
+    at O.then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:39362)
+    at Object.24 (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:33074)
+    at o (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:410)
+    at window.webpackJsonp (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:284)
+    at file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:1", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
+[1027/101326.455:INFO:CONSOLE(1)] "%cUnhandled rejection Error: unknown exception type
+    at <anonymous>:1:1
+From previous event:
+    at O.M [as _captureStackTrace] (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:15957)
+    at O._then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:41006)
+    at O.then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:39362)
+    at Object.24 (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:33074)
+    at o (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:410)
+    at window.webpackJsonp (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:284)
+    at file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:1", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
+[1027/101333.435:INFO:CONSOLE(1)] "%cUnhandled rejection Error: unknown exception type
+    at <anonymous>:1:1
+From previous event:
+    at O.M [as _captureStackTrace] (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:15957)
+    at O._then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:41006)
+    at O.then (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js:1:39362)
+    at Object.24 (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:33074)
+    at o (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:410)
+    at window.webpackJsonp (file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/spaces.js:1:284)
+    at file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/main.js:1:1", source: file:///C:/Program%20Files/Adobe/Adobe%20Photoshop%202020/Required/www-rich-tooltips/build/external.js (1)
