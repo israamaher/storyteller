@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useFirestore } from "../../firebase/useFirestore";
+import { useAuth } from "../../Context/AuthContext";
 import './write.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
@@ -8,6 +9,7 @@ const initialpost = { title: "", content: "", Preview: "", department: "" };
 
 function Writepost() {
   const { addposts, uploadImage } = useFirestore();
+  const { currentUser } = useAuth();
   const [Post, setPost] = useState(initialpost);
   const [Image, setImage] = useState(null);
   const [Preview, setPreview] = useState("");
@@ -32,8 +34,10 @@ function Writepost() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const postData = { ...Post, userId: currentUser.uid };
+
     if (Image) {
-      await uploadImage(Image, Post).then(() => {
+      await uploadImage(Image,  postData).then(() => {
         console.log('Post and image uploaded successfully!');
         setPost(initialpost); // Reset form after submission
         setPreview("");       // Clear image preview
