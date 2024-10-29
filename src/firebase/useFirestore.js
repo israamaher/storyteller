@@ -18,11 +18,19 @@ useEffect(()=>{
     return unsubscribe
 },[]);
 
-const addposts = async (post)=>{
-    await addDoc(collection(db,'posts'), {
-        ...post
-    });
-} 
+const addposts = async (post) => {
+  if (!post.userId) {
+    console.error("userId is required to add a post");
+    return;
+  }
+
+  try {
+    await addDoc(collection(db, 'posts'), post);
+    console.log("Post successfully added:", post);
+  } catch (error) {
+    console.error("Error adding post:", error);
+  }
+};
 
 const deletePost = async (postId) => {
   const postRef = doc(db, 'posts', postId);
@@ -45,33 +53,33 @@ const updatePost = async (postId, updatedData) => {
 };
 
 const uploadImage = async (file, postData) => {
-    if (!file) return;
-    const storageRef = ref(storage, `images/${file.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, file);
-  
-    uploadTask.on('state_changed', 
-      (snapshot) => {
-        // Observe the upload progress
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
-      }, 
-      (error) => {
-        // Handle upload errors
-        console.error("Upload failed:", error);
-      }, 
-      async () => {
-        // Handle successful upload
-        const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-  
-        // Save post data along with the image URL in Firestore
-        await addDoc(collection(db, 'posts'), {
-          ...postData,
-          imageUrl: downloadURL,
-        });
-        console.log('Image uploaded successfully, URL:', downloadURL);
+  if (!file) return;
+  const storageRef = ref(storage, `images/${file.name}`);
+  const uploadTask = uploadBytesResumable(storageRef, file);
+
+  uploadTask.on(
+    'state_changed',
+    (snapshot) => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log('Upload is ' + progress + '% done');
+    },
+    (error) => {
+      console.error("Upload failed:", error);
+    },
+    async () => {
+      const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+      const postWithImage = { ...postData, imageUrl: downloadURL };
+
+      // Save post data with image URL in Firestore
+      try {
+        await addposts(postWithImage);
+        console.log("Image uploaded successfully, URL:", downloadURL);
+      } catch (error) {
+        console.error("Error adding post with image:", error);
       }
-    );
-  };
+    }
+  );
+};
 
   const getPost = async (postId) => {
     const docRef = doc(db, "posts", postId); // replace "posts" with your collection name
